@@ -47,7 +47,6 @@
 </head>
 <body class="text-gray-800 h-screen flex flex-col md:flex-row overflow-hidden">
 
-    <!-- -->
     <div id="login-view" class="fixed inset-0 bg-blue-900 flex items-center justify-center z-50 transition-opacity duration-500">
         <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md mx-4 transform transition-transform">
             <div class="text-center mb-8">
@@ -87,7 +86,6 @@
         </div>
     </div>
 
-    <!-- -->
     <aside id="sidebar" class="hidden w-full md:w-64 bg-blue-900 text-white flex-col shadow-xl z-20 transition-all duration-300 relative h-auto md:h-full flex-shrink-0">
         <div class="p-5 flex items-center justify-between md:justify-center border-b border-blue-800">
             <div class="flex items-center space-x-3">
@@ -148,7 +146,6 @@
         </div>
     </aside>
 
-    <!-- -->
     <main id="main-content" class="hidden flex-1 flex-col h-full bg-gray-50 overflow-hidden relative">
         <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10 px-6 py-4 flex justify-between items-center hidden md:flex">
             <h2 id="page-title" class="text-xl font-bold text-gray-800">Dashboard Utama</h2>
@@ -159,7 +156,6 @@
 
         <div class="flex-1 overflow-x-hidden overflow-y-auto p-4 md:p-6" id="view-container">
             
-            <!-- -->
             <div id="view-dashboard" class="fade-in space-y-6">
                 <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 text-white shadow-lg flex items-center justify-between">
                     <div>
@@ -224,7 +220,6 @@
 
             <div id="view-data-guru" class="hidden fade-in space-y-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- Form Input Manual -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
                         <h3 class="font-bold text-blue-800 mb-4 border-b pb-2"><i class="fas fa-user-plus mr-2"></i>Tambah Guru Manual</h3>
                         <form id="form-tambah-guru" class="flex flex-col md:flex-row gap-4">
@@ -242,7 +237,6 @@
                         </form>
                     </div>
 
-                    <!-- Form Import -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-green-200 bg-green-50">
                         <h3 class="font-bold text-green-800 mb-4 border-b border-green-200 pb-2"><i class="fas fa-file-excel mr-2"></i>Impor Data Guru</h3>
                         <p class="text-xs text-gray-700 mb-4">Pastikan file excel memiliki header kolom <strong>Nama</strong> dan <strong>Mata Pelajaran</strong>.</p>
@@ -253,7 +247,6 @@
                     </div>
                 </div>
 
-                <!-- Tabel Master Guru -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                     <div class="px-6 py-4 bg-gray-50 border-b border-gray-200 flex justify-between items-center">
                         <h3 class="font-bold text-gray-800">Daftar Guru Terdaftar</h3>
@@ -277,10 +270,8 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-kehadiran" class="hidden fade-in space-y-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- Form Input Massal -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
                         <h3 class="font-bold text-blue-800 mb-4 border-b pb-2 flex flex-col md:flex-row md:justify-between md:items-center gap-3">
                             <span><i class="fas fa-users mr-2"></i>Input Kehadiran Serentak</span>
@@ -301,7 +292,6 @@
                                         </tr>
                                     </thead>
                                     <tbody id="tbody-hadir-massal" class="divide-y divide-gray-100 bg-white">
-                                        <!-- Rows akan di-generate via JS -->
                                     </tbody>
                                 </table>
                             </div>
@@ -312,7 +302,6 @@
                         </form>
                     </div>
 
-                    <!-- Form Import Excel Kehadiran -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-green-200 bg-green-50">
                         <h3 class="font-bold text-green-800 mb-4 border-b border-green-200 pb-2"><i class="fas fa-file-excel mr-2"></i>Impor dari Excel</h3>
                         <p class="text-xs text-gray-700 mb-4">Unggah file excel untuk merekap kehadiran otomatis. Pastikan file memiliki kolom <strong>Nama</strong> dan <strong>Persentase</strong> (%). Data dicocokkan dengan Master Guru.</p>
@@ -333,7 +322,6 @@
                     </div>
                 </div>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-hadir">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Kehadiran Guru</h2>
@@ -366,9 +354,7 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-prestasi" class="hidden fade-in space-y-6">
-                <!-- Form Input -->
                 <form id="form-prestasi" class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-yellow-600 mb-4 border-b pb-2"><i class="fas fa-plus-circle mr-2"></i>Input Prestasi / Kejuaraan</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
@@ -400,7 +386,6 @@
                     </div>
                 </form>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-prestasi">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Prestasi & Kejuaraan Guru</h2>
@@ -433,10 +418,8 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-inggris" class="hidden fade-in space-y-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- Form Input Manual -->
                     <form id="form-inggris" class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
                         <h3 class="font-bold text-purple-600 mb-4 border-b pb-2"><i class="fas fa-plus-circle mr-2"></i>Input Progres Kursus B. Inggris Manual</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
@@ -471,7 +454,6 @@
                         </div>
                     </form>
 
-                    <!-- Form Import Excel B Inggris -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-green-200 bg-green-50">
                         <h3 class="font-bold text-green-800 mb-4 border-b border-green-200 pb-2"><i class="fas fa-file-excel mr-2"></i>Impor dari Excel</h3>
                         <p class="text-xs text-gray-700 mb-4">Pastikan file memiliki kolom <strong>Nama</strong>, <strong>Progres</strong>, dan opsional <strong>Catatan</strong>.</p>
@@ -492,7 +474,6 @@
                     </div>
                 </div>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-inggris">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Progres Kursus B. Inggris Guru</h2>
@@ -524,9 +505,7 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-pelatihan" class="hidden fade-in space-y-6">
-                <!-- Form Input -->
                 <form id="form-pelatihan" class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-indigo-600 mb-4 border-b pb-2"><i class="fas fa-plus-circle mr-2"></i>Input Pelatihan Guru</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
@@ -558,7 +537,6 @@
                     </div>
                 </form>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-pelatihan">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Pelatihan & Pengembangan Guru</h2>
@@ -591,9 +569,7 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-pembinaan" class="hidden fade-in space-y-6">
-                <!-- Form Input -->
                 <form id="form-pembinaan" class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
                     <h3 class="font-bold text-red-600 mb-4 border-b pb-2"><i class="fas fa-plus-circle mr-2"></i>Input Pembinaan Guru (Teguran / SP)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
@@ -621,7 +597,6 @@
                     </div>
                 </form>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-pembinaan">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Pembinaan Guru</h2>
@@ -653,10 +628,8 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-supervisi" class="hidden fade-in space-y-6">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <!-- Form Input Manual -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
                         <h3 class="font-bold text-teal-600 mb-4 border-b pb-2"><i class="fas fa-plus-circle mr-2"></i>Input Supervisi Akademik Manual</h3>
                         <form id="form-supervisi">
@@ -693,7 +666,6 @@
                         </form>
                     </div>
 
-                    <!-- Form Import Excel Supervisi -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-green-200 bg-green-50">
                         <h3 class="font-bold text-green-800 mb-4 border-b border-green-200 pb-2"><i class="fas fa-file-excel mr-2"></i>Impor dari Excel</h3>
                         <p class="text-xs text-gray-700 mb-4">Pastikan file memiliki kolom <strong>Nama</strong>, <strong>Nilai</strong>, dan opsional <strong>Catatan</strong>.</p>
@@ -722,7 +694,6 @@
                     </div>
                 </div>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-supervisi">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Supervisi Akademik Guru</h2>
@@ -755,7 +726,6 @@
                 </div>
             </div>
 
-            <!-- -->
             <div id="view-peringkat" class="hidden fade-in space-y-6">
                 <div class="bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-2xl p-6 text-white shadow-lg flex items-center justify-between">
                     <div>
@@ -765,14 +735,10 @@
                     <i class="fas fa-trophy text-6xl text-yellow-300 opacity-50 hidden md:block"></i>
                 </div>
 
-                <!-- Top 3 Cards -->
                 <div id="top-3-container" class="grid grid-cols-1 md:grid-cols-3 gap-4 no-print hidden">
-                    <!-- Rank 1 -->
                     <div class="bg-white p-5 rounded-xl shadow border border-yellow-300 flex flex-col items-center relative overflow-hidden order-1 md:order-2 transform md:-translate-y-4">
                         <div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg">RANK 1</div>
-                        <div class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center text-4xl mb-3 border-4 border-yellow-400 shadow-inner">
-                            🥇
-                        </div>
+                        <div class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center text-4xl mb-3 border-4 border-yellow-400 shadow-inner">🥇</div>
                         <h4 class="font-bold text-lg text-gray-800 text-center" id="top1-nama">-</h4>
                         <p class="text-xs text-gray-500 mb-2" id="top1-mapel">-</p>
                         <div class="bg-yellow-50 px-4 py-2 rounded-lg w-full text-center border border-yellow-100">
@@ -780,12 +746,9 @@
                             <span class="text-2xl font-black text-yellow-600" id="top1-skor">0.00</span>
                         </div>
                     </div>
-                    <!-- Rank 2 -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center relative order-2 md:order-1">
                         <div class="absolute top-0 right-0 bg-gray-300 text-gray-700 text-xs font-bold px-3 py-1 rounded-bl-lg">RANK 2</div>
-                        <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-3xl mb-3 border-4 border-gray-300 shadow-inner">
-                            🥈
-                        </div>
+                        <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center text-3xl mb-3 border-4 border-gray-300 shadow-inner">🥈</div>
                         <h4 class="font-bold text-md text-gray-800 text-center" id="top2-nama">-</h4>
                         <p class="text-xs text-gray-500 mb-2" id="top2-mapel">-</p>
                         <div class="bg-gray-50 px-4 py-2 rounded-lg w-full text-center border border-gray-100">
@@ -793,12 +756,9 @@
                             <span class="text-xl font-bold text-gray-600" id="top2-skor">0.00</span>
                         </div>
                     </div>
-                    <!-- Rank 3 -->
                     <div class="bg-white p-5 rounded-xl shadow-sm border border-amber-600 flex flex-col items-center relative order-3 md:order-3">
                         <div class="absolute top-0 right-0 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">RANK 3</div>
-                        <div class="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center text-3xl mb-3 border-4 border-amber-600 shadow-inner">
-                            🥉
-                        </div>
+                        <div class="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center text-3xl mb-3 border-4 border-amber-600 shadow-inner">🥉</div>
                         <h4 class="font-bold text-md text-gray-800 text-center" id="top3-nama">-</h4>
                         <p class="text-xs text-gray-500 mb-2" id="top3-mapel">-</p>
                         <div class="bg-orange-50 px-4 py-2 rounded-lg w-full text-center border border-orange-100">
@@ -808,7 +768,6 @@
                     </div>
                 </div>
 
-                <!-- Tabel Rekap -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" id="area-cetak-peringkat">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Peringkat Kinerja Guru Terbaik</h2>
@@ -847,7 +806,6 @@
                 </div>
             </div>
 
-            <!-- VIEW BARU: ANALISIS PER GURU -->
             <div id="view-analisis" class="hidden fade-in space-y-6">
                 <div class="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-6 text-white shadow-lg flex items-center justify-between">
                     <div>
@@ -857,7 +815,6 @@
                     <i class="fas fa-chart-line text-6xl text-cyan-300 opacity-50 hidden md:block"></i>
                 </div>
 
-                <!-- Filter Controls -->
                 <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 items-end no-print">
                     <div class="flex-1">
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Pilih Nama Guru</label>
@@ -873,7 +830,6 @@
                     </div>
                 </div>
 
-                <!-- Printable Area Analisis -->
                 <div id="area-cetak-analisis" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hidden">
                     <div class="print-only text-center py-6 border-b-2 border-gray-800 mb-4">
                         <h2 class="text-xl font-bold uppercase">Laporan Analisis Kinerja Individual Guru</h2>
@@ -881,7 +837,6 @@
                     </div>
                     
                     <div class="p-6 md:p-8">
-                        <!-- Header Profil Singkat -->
                         <div class="flex items-center gap-5 mb-8 pb-6 border-b border-gray-200">
                             <div class="w-20 h-20 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center text-4xl font-bold border-4 border-cyan-50"><i class="fas fa-user-tie"></i></div>
                             <div>
@@ -892,7 +847,6 @@
                             </div>
                         </div>
 
-                        <!-- Grid Statistik Kilat -->
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                             <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200 text-center shadow-sm">
                                 <p class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-1">Rata-rata Kehadiran</p>
@@ -912,7 +866,6 @@
                             </div>
                         </div>
 
-                        <!-- Grafik Area -->
                         <div class="mb-10">
                             <h4 class="font-bold text-gray-800 mb-4 border-l-4 border-blue-500 pl-3 text-lg">Grafik Tren Kehadiran Bulanan</h4>
                             <div class="w-full h-72 bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
@@ -920,9 +873,7 @@
                             </div>
                         </div>
 
-                        <!-- Detail Lists -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <!-- Kolom Kiri -->
                             <div class="space-y-6">
                                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
                                     <h4 class="font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2"><i class="fas fa-trophy text-yellow-500 mr-2"></i>Rincian Prestasi & Kejuaraan</h4>
@@ -934,7 +885,6 @@
                                 </div>
                             </div>
 
-                            <!-- Kolom Kanan -->
                             <div class="space-y-6">
                                 <div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
                                     <h4 class="font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2"><i class="fas fa-clipboard-check text-teal-500 mr-2"></i>Hasil Supervisi Akademik</h4>
@@ -946,7 +896,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Bawah Lebar Penuh -->
                             <div class="md:col-span-2 mt-2">
                                 <div class="bg-purple-50 p-5 rounded-xl border border-purple-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
                                     <div>
@@ -966,7 +915,6 @@
         </div>
     </main>
 
-    <!-- -->
     <div id="toast" class="fixed bottom-5 right-5 transform translate-y-full opacity-0 transition-all duration-300 z-[100] flex items-center bg-gray-900 text-white px-5 py-3 rounded-lg shadow-xl pointer-events-none">
         <i id="toast-icon" class="fas fa-check-circle text-green-400 mr-3 text-lg"></i>
         <span id="toast-msg" class="font-medium text-sm">Notifikasi</span>
@@ -986,78 +934,72 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         window.initCloudStorage = async function() {
-            // KONFIGURASI FIREBASE UNTUK VERCEL
-            let firebaseConfig = null;
             
-            // Cek environment (Platform ini vs Vercel mandiri)
-            if (typeof __firebase_config !== 'undefined') {
-                firebaseConfig = JSON.parse(__firebase_config);
-            } else {
-                // UNTUK VERCEL: Masukkan kredensial Firebase Console Anda di bawah ini
-                
-                firebaseConfig = {
-                    apiKey: "AIzaSyDsqT8jJUMr7NqnnpJ5WXTp3cm3lIHZTYQ",
+            // =========================================================================
+            // SILAKAN GANTI KODE DI BAWAH INI DENGAN KODE API KEY MILIK ANDA
+            // Pastikan Anda mempaste persis seperti contoh, JANGAN ADA TANDA /* ATAU */
+            // =========================================================================
+            const firebaseConfig = {
+                apiKey: "AIzaSyDsqT8jJUMr7NqnnpJ5WXTp3cm3lIHZTYQ",
   authDomain: "db-penilaianguru.firebaseapp.com",
   projectId: "db-penilaianguru",
   storageBucket: "db-penilaianguru.firebasestorage.app",
   messagingSenderId: "799456145045",
   appId: "1:799456145045:web:859ff96f08d4ce3e28f59c"
-                };
-                
-            }
+            };
+            // =========================================================================
 
-            if (!firebaseConfig) {
-                console.log("Berjalan offline/lokal. Konfigurasi Firestore belum diisi.");
-                return false; 
-            }
-            
             try {
                 const app = initializeApp(firebaseConfig);
                 const dbInstance = getFirestore(app);
-                const auth = getAuth(app);
-
-                await signInAnonymously(auth);
                 
-                // PERBAIKAN: Menggunakan 1 jalur dokumen statis agar seluruh perangkat terhubung ke 1 brankas data yang sama
+                // Semua perangkat akan membaca file data_utama yang SAMA
                 const docRef = doc(dbInstance, 'sistem_penilaian', 'data_utama');
                 
-                // Memuat data dari Awan
+                // Memuat data dari Awan saat baru buka web
                 const docSnap = await getDoc(docRef);
                 if (docSnap.exists()) {
                     window.db = Object.assign(window.db, docSnap.data());
                     if(typeof window.refreshAll === 'function') window.refreshAll();
+                    setTimeout(() => showToast('Tersambung ke Database Awan!', 'success'), 1500);
                 } else {
                     await setDoc(docRef, window.db);
+                    setTimeout(() => showToast('Database Awan Baru Berhasil Dibuat!', 'success'), 1500);
                 }
                 
-                // Sinkronisasi Live Real-time antar perangkat
+                // Fitur Sinkronisasi Live Real-time antar perangkat
                 onSnapshot(docRef, (docData) => {
                     if(docData.exists()) {
                         window.db = Object.assign(window.db, docData.data());
                         if(typeof window.refreshAll === 'function') window.refreshAll();
                     }
-                }, (error) => { console.error("Snapshot error:", error); });
+                }, (error) => { 
+                    console.error("Snapshot error:", error); 
+                    showToast('Akses Database Ditolak. (Cek Rules Firebase)', 'error');
+                });
 
-                // Mengganti fungsi simpan lokal agar ikut tersimpan ke awan
+                // Mengganti fungsi simpan lokal agar ikut otomatis menyetor ke awan
                 window.originalSaveDB = window.saveDB;
                 window.saveDB = function(key) {
                     window.originalSaveDB(key); // Tetap simpan di penyimpanan lokal perangkat sebagai cadangan
-                    setDoc(docRef, window.db).catch(e => console.error("Gagal simpan ke awan", e));
+                    setDoc(docRef, window.db).catch(e => {
+                        console.error("Gagal simpan ke awan", e);
+                        showToast('Gagal menyinkronkan ke Awan', 'error');
+                    });
                 };
 
                 return true;
             } catch (e) {
                 console.error("Gagal inisiasi penyimpanan awan:", e);
+                setTimeout(() => showToast('Gagal terhubung ke Awan (Mode Offline Aktif)', 'error'), 1500);
                 return false;
             }
         };
     </script>
 
-    <!-- -->
     <script>
         var db = {
             guru: JSON.parse(localStorage.getItem('db_guru')) || [],
@@ -1071,11 +1013,9 @@
 
         function saveDB(key) { localStorage.setItem('db_' + key, JSON.stringify(db[key])); }
         
-        // Mendaftarkan database ke sistem global untuk dibaca oleh modul Awan
         window.db = db;
         window.saveDB = saveDB;
 
-        // Utils
         const getBulanSekarang = () => { const d = new Date(); return `${d.getFullYear()}-${(d.getMonth()+1).toString().padStart(2,'0')}`; };
         const formatBulan = (val) => {
             if(!val) return '-';
@@ -1086,9 +1026,7 @@
         const getNamaGuru = (id) => { const g = db.guru.find(x => x.id === id); return g ? g.nama : 'Guru Dihapus'; };
         const getMapelGuru = (id) => { const g = db.guru.find(x => x.id === id); return g ? (g.mapel || g.nip || '-') : '-'; };
 
-        // Init App
         window.onload = async () => {
-            // Memicu koneksi Penyimpanan Awan (Cloud Storage) saat aplikasi dimuat
             if (typeof window.initCloudStorage === 'function') {
                 await window.initCloudStorage();
             }
@@ -1096,14 +1034,12 @@
             document.getElementById('current-date').textContent = new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
             if(sessionStorage.getItem('isLoggedIn') === 'true') showMainApp();
             
-            // Set default periode forms
             const currentBulan = getBulanSekarang();
             ['input-hadir-bulan-massal', 'input-hadir-bulan-import', 'input-pres-bulan', 'input-ing-bulan', 'input-ing-bulan-import', 'input-lat-bulan', 'input-bin-bulan'].forEach(id => {
                 if (document.getElementById(id)) document.getElementById(id).value = currentBulan;
             });
         };
 
-        // UI & Navigasi
         document.getElementById('login-form').addEventListener('submit', (e) => {
             e.preventDefault();
             if (document.getElementById('username').value === 'admin' && document.getElementById('password').value === 'password') {
@@ -1155,7 +1091,6 @@
             };
             document.getElementById('page-title').textContent = titles[viewId];
             
-            // Render ulang grafik jika membuka tab analisis agar ukurannya responsif
             if(viewId === 'analisis' && chartKehadiranInstance) {
                 chartKehadiranInstance.resize();
             }
@@ -1187,7 +1122,13 @@
             selects.forEach(sel => sel.innerHTML = options);
         }
 
-        // --- Data Guru Logic ---
+        function hapusData(kategori, id) {
+            tampilkanModal('Hapus data ini?', () => {
+                db[kategori] = db[kategori].filter(x => x.id !== id);
+                saveDB(kategori); refreshAll(); showToast('Data dihapus');
+            });
+        }
+
         document.getElementById('form-tambah-guru').addEventListener('submit', (e) => {
             e.preventDefault();
             db.guru.push({ id: 'G-' + Date.now(), nama: document.getElementById('input-nama-guru').value.trim(), mapel: document.getElementById('input-mapel-guru').value.trim() || '-' });
@@ -1235,7 +1176,6 @@
             reader.readAsArrayBuffer(file);
         }
 
-        // --- Import Excel Khusus Kehadiran ---
         function importExcelKehadiran() {
             const fileInput = document.getElementById('excel-file-hadir');
             const file = fileInput.files[0];
@@ -1253,7 +1193,6 @@
                     
                     if (jsonData.length <= 1) return showToast('Data Excel kosong', 'error');
                     
-                    // Cari indeks kolom secara dinamis
                     let headers = jsonData[0].map(h => String(h).toLowerCase().trim());
                     let idxNama = headers.findIndex(h => h.includes('nama'));
                     let idxPersen = headers.findIndex(h => h.includes('persen') || h.includes('hadir') || h.includes('%'));
@@ -1271,7 +1210,6 @@
 
                         if (persen === null || isNaN(persen)) continue; 
 
-                        // Mencocokkan data excel dengan master data Guru
                         let guru = null;
                         if (namaExcel) guru = db.guru.find(g => g.nama.toLowerCase() === namaExcel);
 
@@ -1284,7 +1222,7 @@
                             };
                             
                             const adaIndex = db.hadir.findIndex(x => x.bulan === bulan && x.guruId === guru.id);
-                            if (adaIndex !== -1) { db.hadir[adaIndex] = newData; } // Timpa jika sudah ada
+                            if (adaIndex !== -1) { db.hadir[adaIndex] = newData; } 
                             else { db.hadir.push(newData); }
                             added++;
                         }
@@ -1304,15 +1242,6 @@
             reader.readAsArrayBuffer(file);
         }
 
-        // --- Generic Delete logic ---
-        function hapusData(kategori, id) {
-            tampilkanModal('Hapus data ini?', () => {
-                db[kategori] = db[kategori].filter(x => x.id !== id);
-                saveDB(kategori); refreshAll(); showToast('Data dihapus');
-            });
-        }
-
-        // --- Logika Input & Render Kategori 1: KEHADIRAN ---
         function renderFormKehadiranMassal() {
             const tbody = document.getElementById('tbody-hadir-massal');
             const bulan = document.getElementById('input-hadir-bulan-massal').value;
@@ -1324,7 +1253,6 @@
                 return;
             }
 
-            // Generate form massal
             tbody.innerHTML = db.guru.map((g, i) => {
                 const exist = db.hadir.find(h => h.guruId === g.id && h.bulan === bulan);
                 const val = exist ? exist.persen : ''; 
@@ -1404,7 +1332,6 @@
                 </tr>`).join('');
         }
 
-        // --- Logika Input & Render Kategori 2: PRESTASI ---
         document.getElementById('form-prestasi').addEventListener('submit', (e) => {
             e.preventDefault();
             db.prestasi.push({ id: 'P-' + Date.now(), bulan: document.getElementById('input-pres-bulan').value, guruId: document.getElementById('input-pres-guru').value, nama: document.getElementById('input-pres-nama').value, tingkat: document.getElementById('input-pres-tingkat').value || '-', sertifikat: document.getElementById('input-pres-sertifikat').value || '-' });
@@ -1419,7 +1346,7 @@
             const tbody = document.getElementById('tbody-prestasi');
             tbody.innerHTML = data.length === 0 ? `<tr><td colspan="7" class="py-4 text-center text-xs text-gray-500">Tidak ada data.</td></tr>` : 
                 data.map((d, i) => {
-                    const link = d.sertifikat || d.ket; // d.ket untuk jaga-jaga data lama sebelum diupdate
+                    const link = d.sertifikat || d.ket;
                     const hasLink = link && link !== '-';
                     return `
                     <tr class="hover:bg-gray-50 text-xs md:text-sm">
@@ -1434,7 +1361,6 @@
                 }).join('');
         }
 
-        // --- Logika Input & Render Kategori 3: B INGGRIS ---
         document.getElementById('form-inggris').addEventListener('submit', (e) => {
             e.preventDefault();
             const newData = { id: 'I-' + Date.now(), bulan: document.getElementById('input-ing-bulan').value, guruId: document.getElementById('input-ing-guru').value, progres: document.getElementById('input-ing-progres').value, cat: document.getElementById('input-ing-catatan').value || '-' };
@@ -1459,7 +1385,6 @@
                 </tr>`).join('');
         }
 
-        // --- Import Excel Khusus B Inggris ---
         function importExcelInggris() {
             const fileInput = document.getElementById('excel-file-inggris');
             const file = fileInput.files[0];
@@ -1477,7 +1402,6 @@
                     
                     if (jsonData.length <= 1) return showToast('Data Excel kosong', 'error');
                     
-                    // Cari indeks kolom
                     let headers = jsonData[0].map(h => String(h).toLowerCase().trim());
                     let idxNama = headers.findIndex(h => h.includes('nama'));
                     let idxProgres = headers.findIndex(h => h.includes('progres') || h.includes('level') || h.includes('status'));
@@ -1497,7 +1421,6 @@
 
                         if (!progres) continue; 
 
-                        // Mencocokkan dengan Master Data Guru
                         let guru = null;
                         if (namaExcel) guru = db.guru.find(g => g.nama.toLowerCase() === namaExcel);
 
@@ -1511,7 +1434,7 @@
                             };
                             
                             const adaIndex = db.inggris.findIndex(x => x.bulan === bulan && x.guruId === guru.id);
-                            if (adaIndex !== -1) { db.inggris[adaIndex] = newData; } // Timpa jika ada
+                            if (adaIndex !== -1) { db.inggris[adaIndex] = newData; }
                             else { db.inggris.push(newData); }
                             added++;
                         }
@@ -1530,7 +1453,6 @@
             reader.readAsArrayBuffer(file);
         }
 
-        // --- Logika Input & Render Kategori 4: PELATIHAN ---
         document.getElementById('form-pelatihan').addEventListener('submit', (e) => {
             e.preventDefault();
             db.pelatihan.push({ 
@@ -1575,7 +1497,6 @@
                 }).join('');
         }
 
-        // --- Logika Input & Render Kategori 5: PEMBINAAN ---
         document.getElementById('form-pembinaan').addEventListener('submit', (e) => {
             e.preventDefault();
             db.pembinaan.push({ 
@@ -1612,7 +1533,6 @@
                 </tr>`).join('');
         }
 
-        // --- Logika Input & Render Kategori 6: SUPERVISI ---
         document.getElementById('form-supervisi').addEventListener('submit', (e) => {
             e.preventDefault();
             db.supervisi.push({
@@ -1649,7 +1569,6 @@
                 </tr>`).join('');
         }
 
-        // --- Import Excel Supervisi ---
         function importExcelSupervisi() {
             const fileInput = document.getElementById('excel-file-supervisi');
             const file = fileInput.files[0];
@@ -1720,7 +1639,6 @@
             reader.readAsArrayBuffer(file);
         }
 
-        // --- LOGIKA PERINGKAT TAHUNAN ---
         function renderTabelPeringkat() {
             const tahun = document.getElementById('filter-peringkat-tahun').value;
             if (!tahun) return;
@@ -1730,27 +1648,22 @@
             let peringkatData = [];
 
             db.guru.forEach(guru => {
-                // 1. Kehadiran (30%)
                 const hadirTahun = db.hadir.filter(h => h.guruId === guru.id && h.bulan.startsWith(tahun));
                 const avgHadir = hadirTahun.length ? hadirTahun.reduce((sum, h) => sum + parseFloat(h.persen), 0) / hadirTahun.length : 0;
                 const skorHadir = avgHadir * 0.30;
 
-                // 2. Supervisi (30%)
                 const supTahun = db.supervisi.filter(s => s.guruId === guru.id && s.tahun.includes(tahun));
                 const avgSup = supTahun.length ? supTahun.reduce((sum, s) => sum + parseFloat(s.nilai), 0) / supTahun.length : 0;
                 const skorSup = avgSup * 0.30;
 
-                // 3. Prestasi (15%) - Max 3 prestasi = 100 (tiap 1 prestasi = 33.33)
                 const presTahun = db.prestasi.filter(p => p.guruId === guru.id && p.bulan.startsWith(tahun));
                 let nilaiPres = Math.min(presTahun.length * 33.33, 100);
                 const skorPres = nilaiPres * 0.15;
 
-                // 4. Pelatihan (15%) - Max 4 pelatihan = 100 (tiap 1 pelatihan = 25)
                 const latTahun = db.pelatihan.filter(l => l.guruId === guru.id && l.bulan.startsWith(tahun));
                 let nilaiLat = Math.min(latTahun.length * 25, 100);
                 const skorLat = nilaiLat * 0.15;
 
-                // 5. B. Inggris (10%)
                 const ingTahun = db.inggris.filter(i => i.guruId === guru.id && i.bulan.startsWith(tahun));
                 const konversiInggris = (progres) => {
                     const p = progres.toLowerCase();
@@ -1763,11 +1676,9 @@
                 const avgIng = ingTahun.length ? ingTahun.reduce((sum, i) => sum + konversiInggris(i.progres), 0) / ingTahun.length : 0;
                 const skorIng = avgIng * 0.10;
 
-                // 6. Penalti Pembinaan (-5 per kasus)
                 const binTahun = db.pembinaan.filter(b => b.guruId === guru.id && b.bulan.startsWith(tahun));
                 const penalti = binTahun.length * 5;
 
-                // TOTAL SKOR AKHIR
                 let totalSkor = (skorHadir + skorSup + skorPres + skorLat + skorIng) - penalti;
                 if (totalSkor < 0) totalSkor = 0; 
 
@@ -1783,10 +1694,8 @@
                 });
             });
 
-            // Urutkan Peringkat (Terbesar ke Terkecil)
             peringkatData.sort((a, b) => parseFloat(b.skorAkhir) - parseFloat(a.skorAkhir));
 
-            // Update UI Podium Top 3 
             const top3Container = document.getElementById('top-3-container');
             if (peringkatData.length > 0 && parseFloat(peringkatData[0].skorAkhir) > 0) {
                 top3Container.classList.remove('hidden');
@@ -1808,7 +1717,6 @@
                 top3Container.classList.add('hidden');
             }
 
-            // Render Tabel Data Keseluruhan
             const tbody = document.getElementById('tbody-peringkat');
             tbody.innerHTML = peringkatData.length === 0 ? `<tr><td colspan="9" class="py-4 text-center text-xs text-gray-500">Tidak ada data guru.</td></tr>` : 
                 peringkatData.map((d, i) => `
@@ -1831,7 +1739,6 @@
             `).join('');
         }
 
-        // --- LOGIKA ANALISIS & GRAFIK (VIEW BARU) ---
         let chartKehadiranInstance = null;
 
         function renderAnalisisGuru() {
@@ -1844,13 +1751,11 @@
             const guru = db.guru.find(g => g.id === guruId);
             if (!guru) return;
 
-            // Buka area tampilan
             document.getElementById('area-cetak-analisis').classList.remove('hidden');
             document.getElementById('label-analisis-tahun').textContent = tahun;
             document.getElementById('analisis-nama-guru').textContent = guru.nama;
             document.getElementById('analisis-mapel-guru').textContent = guru.mapel || '-';
 
-            // 1. Kalkulasi Statistik Kilat
             const hadirTahun = db.hadir.filter(h => h.guruId === guruId && h.bulan.startsWith(tahun));
             const avgHadir = hadirTahun.length ? hadirTahun.reduce((sum, h) => sum + parseFloat(h.persen), 0) / hadirTahun.length : 0;
             document.getElementById('analisis-stat-hadir').textContent = avgHadir.toFixed(1) + '%';
@@ -1866,17 +1771,16 @@
             const binTahun = db.pembinaan.filter(b => b.guruId === guruId && b.bulan.startsWith(tahun));
             document.getElementById('analisis-stat-bin').textContent = binTahun.length;
 
-            // 2. Persiapan Data & Render Grafik Kehadiran (12 Bulan)
             const dataHadirBulan = Array(12).fill(0);
             const adaDataBulan = Array(12).fill(false);
             hadirTahun.forEach(h => {
-                const monthIndex = parseInt(h.bulan.split('-')[1]) - 1; // 0 untuk Jan, 11 untuk Des
+                const monthIndex = parseInt(h.bulan.split('-')[1]) - 1; 
                 dataHadirBulan[monthIndex] = parseFloat(h.persen);
                 adaDataBulan[monthIndex] = true;
             });
 
             const ctx = document.getElementById('chartKehadiran').getContext('2d');
-            if (chartKehadiranInstance) chartKehadiranInstance.destroy(); // Hancurkan grafik sebelumnya jika ada
+            if (chartKehadiranInstance) chartKehadiranInstance.destroy(); 
             
             chartKehadiranInstance = new Chart(ctx, {
                 type: 'line',
@@ -1884,8 +1788,8 @@
                     labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
                     datasets: [{
                         label: 'Persentase Kehadiran (%)',
-                        data: dataHadirBulan.map((val, idx) => adaDataBulan[idx] ? val : null), // null agar garis terputus jika tidak ada data di bulan tersebut
-                        borderColor: '#06b6d4', // warna cyan tailwind
+                        data: dataHadirBulan.map((val, idx) => adaDataBulan[idx] ? val : null),
+                        borderColor: '#06b6d4',
                         backgroundColor: 'rgba(6, 182, 212, 0.1)',
                         borderWidth: 3,
                         pointBackgroundColor: '#0891b2',
@@ -1894,13 +1798,13 @@
                         pointRadius: 5,
                         pointHoverRadius: 7,
                         fill: true,
-                        spanGaps: true // hubungkan garis meski ada bulan yang bolong/null
+                        spanGaps: true 
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    animation: false, // Matikan animasi agar tangkapan PDF (html2canvas) bisa sempurna merekam grafik
+                    animation: false, 
                     plugins: {
                         legend: { display: false },
                         tooltip: { backgroundColor: '#1e293b', titleFont: { size: 13 }, bodyFont: { size: 14, weight: 'bold' } }
@@ -1911,7 +1815,6 @@
                 }
             });
 
-            // 3. Render List Rincian (Detail Lists)
             document.getElementById('analisis-list-prestasi').innerHTML = presTahun.length ? 
                 presTahun.map(p => `<li><div class="flex items-start"><div class="text-xs font-bold text-gray-500 bg-gray-200 px-2 py-1 rounded mr-3 mt-0.5">${formatBulan(p.bulan).split(' ')[0]}</div><div><p class="font-bold text-gray-800">${p.nama}</p><p class="text-gray-500 text-xs">Tingkat: ${p.tingkat}</p></div></div></li>`).join('') : 
                 '<li class="text-gray-400 italic text-sm">Belum ada catatan prestasi di tahun ini.</li>';
@@ -1928,7 +1831,6 @@
                 binTahun.map(b => `<li class="border-l-2 border-red-300 pl-3"><p class="font-bold text-red-700">${b.alasan}</p><p class="text-gray-600 text-xs mt-1"><span class="font-semibold text-gray-700">Tindak Lanjut:</span> ${b.tindak}</p><p class="text-[10px] text-gray-400 mt-1"><i class="far fa-calendar-alt"></i> ${formatBulan(b.bulan)}</p></li>`).join('') : 
                 '<li class="text-gray-400 italic text-sm flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Bersih. Tidak ada catatan teguran pelanggaran.</li>';
 
-            // 4. Bahasa Inggris (Cari data paling akhir/terbaru di tahun tersebut)
             const ingTahun = db.inggris.filter(i => i.guruId === guruId && i.bulan.startsWith(tahun)).sort((a,b) => b.bulan.localeCompare(a.bulan));
             if (ingTahun.length > 0) {
                 document.getElementById('analisis-inggris-terakhir').innerHTML = `
@@ -1950,25 +1852,22 @@
             if (!guruId) return showToast('Pilih dan jalankan "Analisis Data" terlebih dahulu!', 'error');
             const guru = db.guru.find(g => g.id === guruId);
             
-            // Panggil fungsi export PDF yang sudah kita buat (Otomatis akan menyisipkan Header Sekolah & TTD Footer)
             exportToPDF('area-cetak-analisis', `Analisis_Profil_Kinerja_${guru.nama.replace(/\s+/g, '_')}`);
         }
 
-        // --- EXPORT LOGIC ---
         function exportToExcel(tableId, namaFile) {
             const table = document.getElementById(tableId);
             if (table.rows.length <= 1 || table.rows[1].cells.length === 1) { return showToast('Tidak ada data untuk diekspor!', 'error'); }
             
             const wb = XLSX.utils.table_to_book(table, {sheet: "Data"});
             
-            // Hapus kolom 'Aksi' (kolom terakhir) dari excel
             const ws = wb.Sheets["Data"];
             let range = XLSX.utils.decode_range(ws['!ref']);
             for(let R = range.s.r; R <= range.e.r; ++R) {
                 let cellRef = XLSX.utils.encode_cell({c: range.e.c, r: R});
                 delete ws[cellRef];
             }
-            range.e.c--; // Kurangi range kolom
+            range.e.c--; 
             ws['!ref'] = XLSX.utils.encode_range(range);
 
             XLSX.writeFile(wb, `${namaFile}_${getBulanSekarang()}.xlsx`);
@@ -1978,7 +1877,6 @@
         function exportToPDF(containerId, namaFile) {
             const element = document.getElementById(containerId);
             
-            // Cek data khusus tabel (jika bukan cetak profil analisis)
             const tbody = element.querySelector('tbody');
             if (tbody && (tbody.rows.length === 0 || tbody.rows[0].cells.length === 1)) { 
                 return showToast('Tidak ada data untuk dicetak!', 'error'); 
@@ -1986,7 +1884,6 @@
             
             showToast('Menyiapkan dokumen PDF...', 'success');
             
-            // --- INJEKSI KOP SURAT DAN TANDA TANGAN DINAMIS ---
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             const today = new Date().toLocaleDateString('id-ID', options);
             
@@ -2012,11 +1909,9 @@
                 </div>
             `;
             
-            // Sisipkan ke dalam container yang akan diubah ke PDF
             element.insertAdjacentHTML('afterbegin', kopSuratHTML);
             element.insertAdjacentHTML('beforeend', ttdHTML);
             
-            // Modifikasi border dan spasi dari judul laporan asli sementara (agar tidak menabrak kop surat)
             const existingTitle = element.querySelector('.print-only.text-center.py-6');
             if (existingTitle) {
                 existingTitle.classList.remove('py-6', 'border-b-2', 'border-gray-800', 'mb-4');
@@ -2036,11 +1931,9 @@
                 document.querySelectorAll('.print-only').forEach(el => el.style.display = '');
                 document.querySelectorAll('.no-print').forEach(el => el.style.display = '');
                 
-                // Hapus elemen injeksi setelah PDF selesai dibuat
                 element.querySelector('.pdf-kop-surat')?.remove();
                 element.querySelector('.pdf-tanda-tangan')?.remove();
                 
-                // Kembalikan style judul aslinya
                 if (existingTitle) {
                     existingTitle.classList.add('py-6', 'border-b-2', 'border-gray-800', 'mb-4');
                     existingTitle.classList.remove('py-2', 'mb-6');
@@ -2050,7 +1943,6 @@
             });
         }
 
-        // --- UI Modal & Toast Logic ---
         function tampilkanModal(pesan, callback) {
             const modal = document.getElementById('modal-confirm');
             const content = document.getElementById('modal-content');
