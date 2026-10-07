@@ -986,7 +986,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         window.initCloudStorage = async function() {
@@ -1000,8 +1000,7 @@
                 // UNTUK VERCEL: Hapus tanda komentar (/* ... */) di bawah dan isi dengan kredensial Firebase Console Anda
                 /* 
                 firebaseConfig = {
-                
-apiKey: "AIzaSyDsqT8jJUMr7NqnnpJ5WXTp3cm3lIHZTYQ",
+                apiKey: "AIzaSyDsqT8jJUMr7NqnnpJ5WXTp3cm3lIHZTYQ",
   authDomain: "db-penilaianguru.firebaseapp.com",
   projectId: "db-penilaianguru",
   storageBucket: "db-penilaianguru.firebasestorage.app",
@@ -1017,21 +1016,14 @@ apiKey: "AIzaSyDsqT8jJUMr7NqnnpJ5WXTp3cm3lIHZTYQ",
             }
             
             try {
-                const appId = typeof __app_id !== 'undefined' ? __app_id : 'penilaian-guru-app';
                 const app = initializeApp(firebaseConfig);
                 const dbInstance = getFirestore(app);
                 const auth = getAuth(app);
 
-                // Autentikasi Keamanan
-                if (typeof __initial_auth_token !== 'undefined') {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
+                await signInAnonymously(auth);
                 
-                const userId = auth.currentUser.uid;
-                // Menggunakan path yang aman sesuai standar keamanan
-                const docRef = doc(dbInstance, 'artifacts', appId, 'users', userId, 'database', 'main');
+                // PERBAIKAN: Menggunakan 1 jalur dokumen statis agar seluruh perangkat terhubung ke 1 brankas data yang sama
+                const docRef = doc(dbInstance, 'sistem_penilaian', 'data_utama');
                 
                 // Memuat data dari Awan
                 const docSnap = await getDoc(docRef);
@@ -1043,9 +1035,9 @@ apiKey: "AIzaSyDsqT8jJUMr7NqnnpJ5WXTp3cm3lIHZTYQ",
                 }
                 
                 // Sinkronisasi Live Real-time antar perangkat
-                onSnapshot(docRef, (doc) => {
-                    if(doc.exists()) {
-                        window.db = Object.assign(window.db, doc.data());
+                onSnapshot(docRef, (docData) => {
+                    if(docData.exists()) {
+                        window.db = Object.assign(window.db, docData.data());
                         if(typeof window.refreshAll === 'function') window.refreshAll();
                     }
                 }, (error) => { console.error("Snapshot error:", error); });
